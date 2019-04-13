@@ -1,0 +1,456 @@
+
+// FONTS FOR WEBSITE 
+
+@font-face {
+    font-family: 'proxima_bold';
+    src: url('../font/proxima_nova_alt_rgbold.eot');
+    src: url('../font/proxima_nova_alt_rgbold.eot?#iefix') format('embedded-opentype'),
+    	url('../font/proxima_nova_alt_rgbold.woff2') format('woff2'),
+        url('../font/proxima_nova_alt_rgbold.woff') format('woff'),
+       url('../font/proxima_nova_alt_rgbold.ttf') format('truetype'),
+        url('../font/proxima_nova_alt_rgbold.svg#proxima_nova_alt_rgbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+	// name of our font 
+    font-family: 'proxima_regular';
+    src: url('../font/proxima_nova_alt_rgregular.eot');
+    src: url('../font/proxima_nova_alt_rgregular.eot?#iefix') format('embedded-opentype'),
+        url('../font/proxima_nova_alt_rgregular.woff2') format('woff2'),
+        url('../font/proxima_nova_alt_rgregular.woff') format('woff'),
+        url('../font/proxima_nova_alt_rgregular.ttf') format('truetype'),
+        url('../font/proxima_nova_alt_rgregular.svg#proxima_nova_alt_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// our method for font 
+ .reg(){ 
+	font-family:'proxima_bold', sans-serif; 
+}
+
+ .bold()  {
+ font-family: 'proxima_regular', sans-serif; 
+ font-weight:bold; 
+ }
+
+// COLOR 
+@BTN-COLOR:#E99700;
+@ICON-COLOR:#00B83E;
+@wrong:#CA3B34;
+@bg-light:#F5F4F6;
+@light:white;
+@text:black;
+@input:#A0CADF;
+@border-input:#dddddddd;
+
+//BASIC SETTING
+html { 
+font-size:10px;
+line-height:1.5; 
+}
+body { 
+.reg() 
+}
+a{ 
+	&:hover{ 
+	text-decoration:none; 
+	
+	} 
+}
+button, input, textarea { 
+	&:focus{  
+	outline:none;
+	}
+	
+ 	
+}
+
+
+// TOPOGRAPHY
+section {
+padding:10rem 0 ;
+}
+.section-header{ 
+
+&-light{ 
+color:@light;
+}
+h2{
+.bold();
+font-size:3.6rem;
+}
+p{ 
+font-size:1.4rem; 
+}
+margin:2rem 0 10rem;
+text-align:center; 
+}
+
+
+//fist scrin 
+.main { 
+background:  url(../img/4.jpg) center center no-repeat;
+background-size:cover;
+padding:3rem 0 5rem; 
+// second part site
+	&-content{ 
+	margin-top:10rem;
+// header of site
+		h1{ 
+		margin-top:0;
+		margin-bottom:4rem; 
+		.bold();
+		font-size:4rem;
+		text-transform:uppercase;
+		}
+// subtitle of site
+		&-subtitle { 
+		margin-bottom:4rem;
+		font-size:2.4rem;
+		}
+//icon for cost
+		span{ 
+		display:inline-block;
+		padding:3rem 5rem;
+		background-color:@ICON-COLOR;
+		color:@light;
+		text-align: center; 
+		// number 300
+			strong{
+			font-size:3rem; 
+			.bold();	
+			}
+		}
+// last line
+		&-trigger{
+		display:block;
+		margin-top:4rem; 
+		font-size:2.2rem; 
+		text-transform:uppercase;
+		.bold();
+
+		}
+	}
+	 &-form { 
+	padding:4rem 5rem;
+	background-color:@light;
+	text-align:center;
+	// header of form 
+		&-header{
+		font-size:1.8rem;
+	
+		}
+		strong{
+			font-size:1.9rem; 
+		}
+	//	field for information 
+		&-input{ 
+		display:block;
+		border:1px solid @border-input;
+		width:100%;
+		padding:1.5rem;
+		margin:2rem 0;
+		border-radius:5px; 
+		}
+	// signate to field
+		label{
+		display:inline-block;
+		left:50%;
+		transform:translateX(-50%) translateY(-50%) ;
+		position:absolute;
+		// padding:0.5rem; bag
+		background-color:@light;
+		}
+	//sinate under button-form
+		small{ 
+		display:block;
+		margin-top:1.5rem; 
+		} 
+	// the button form 
+		&-btn{ 
+		display:block;
+		height:5.5rem;
+		font-size:1.6rem;
+		width:100%;
+		}
+	} 
+ }
+  
+
+
+
+
+// header button
+.button { 
+padding:1rem 3rem;
+text-transform:uppercase;
+border:none;
+font-size:1.2rem;
+border-radius:8px;
+background-color:@BTN-COLOR; 
+color:@light;
+transition:all 0.2s;
+	&:hover{ 
+	cursor:pointer;
+	background-color: darken(@BTN-COLOR,7%);
+	}
+}
+
+// header line
+.header{ 
+height:7rem;
+ }
+ // link of header
+.phone{
+text-align:right;
+	&-link { 
+	width:20rem;
+	display: inline-block;
+	.bold(); 
+	font-size:2rem;
+	height:7rem;
+	line-height:7rem;
+	color:@text; 
+	}
+}
+// block of header for button
+.wrap{
+display:table;
+width: 100%;
+height:7rem;
+	//subblock button  
+	&-block { 
+	display:table-cell;
+	vertical-align:middle;
+	} 
+ }
+ 
+// ОФОРМЛЕНИЕ СЕКЦИЙ С ПРИМУШЕСТВАМИ 
+.features{ 
+	&-block{ 
+	text-align:center;
+		h3{ 
+		.bold();
+		font-size:2rem;
+		margin-bottom:3rem;
+		}
+		p{ 
+		font-size:1.4rem;
+		display:inline-block;
+		width:80%;
+
+		}
+	}
+	&-img { 
+		height:8rem;
+		margin-bottom:3rem;
+		img{
+		display:block;
+		margin:0 auto;
+		}
+
+	 }
+ }
+ // убириан выделение у преимушеств
+.slick-active{ 
+outline:none; 
+}
+//TO FORM THE SLIDER FOR SECTION WITH ADVATAGE
+.arrow{ 
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+z-index:99;
+width:2rem;
+height:2rem;
+border:none;
+background-size:100%;
+
+}
+// кнопка преведущая 
+.prev {
+background-image:url(../img/right.png)  ;
+width:7rem;
+height:7rem; 
+right:0;
+
+
+}
+// кнопка следущая 
+.next{ 
+
+background-image:url(../img/left.png)  ;
+width:7rem;
+height:7rem;
+left:0;
+
+}
+
+
+
+
+
+// оформление модальных окон
+.popup{ 
+	display:none;
+	position:fixed;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	width:100%;
+	height:100%;
+	z-index:9;
+	background-color:rgba(0,0,0,0.5);
+	
+	
+	&-form{ 
+	margin-top:3rem;
+	padding:0;
+	}
+	&-close{
+	position:absolute;
+	top:-1.5rem;		
+	right:-2rem;
+	width:2rem;
+	text-align:center; 
+	border:none;
+	background-color:transparent;
+	font-size:3rem;
+	color:@light;
+	}
+	&-content{ 
+	position:fixed;
+	text-align:center;
+	left:50%;
+	top:10%; 
+	background-color:@light;
+	transform:translateX(-50%);
+	padding:4rem 6rem; 
+	}
+	&-header{ 
+	.bold();
+	}
+}
+
+// section2 prices 
+.price{ 
+background:@ICON-COLOR ;
+
+
+	
+	&-header-btn{ 
+	margin-top:2.5rem;
+	} 
+	&-button{ 
+		float:right;
+	}
+	
+  //карточки с тарифами
+ 	 &-block { 
+  	//если мы сделаем max то появится полоса прокрутки 
+  	min-height:60rem;
+  	padding:2rem 3rem ; 
+	background-color:@light; 
+	box-shadow: 7px 12px 21px 0px rgba(0,0,0,.17);
+	text-align:center;
+	margin-top:2rem;
+	
+
+		h4{ 
+		margin:3rem 0;
+		font-size:1.9rem;
+		.bold();
+		}
+		img { 
+		width:100%;
+		max-width:50rem;
+		display:inline-block;
+		margin-bottom:2rem;
+		}
+	} 
+
+	&-tag{ 
+	font-size:1.9rem;
+	.bold();	
+	}
+	&-list{ 
+	padding:none;
+	list-style: none;
+	min-height:15rem;
+	font-size:1.6rem;
+	line-height:1.6;
+		li{ 
+			&:before{ 
+			content:'';
+			display:inline-block;
+			width:1.4rem;
+			height:1.4rem;
+			background:url(../img/part_2/check.png)no-repeat center;
+			background-size:100%; 
+			vertical-align:middle;
+			margin-right:1rem;
+			} 
+		}
+	}
+
+}
+// Отсек для отзывов 
+.feedback-slider-item {
+	background:url(../img/part_of_3/1.jpg) no-repeat;
+	background:cover;
+
+	&-slider{ 
+	background-color:@light;
+	box-shadow: 6px 10px 18px 0px rgba(0,0,0,0.11); 
+	}
+}
+
+@media(max-width:991px){ 
+.main{ 
+background-position:top right; }
+.main-content{ 
+margin-top:2rem;
+}
+.main-title{ 
+padding:3rem;
+text-align:center; 
+}
+.phone-block{ 
+text-align:center;
+ } 
+.price{ 
+
+	&-button{ 
+	text-align:center; 
+	font-size:2rem ;
+	padding:0 2rem;
+	float:none;		
+	}
+	&-header-btn{ 
+	margin-bottom:0;
+	}
+}
+.section-header-light{ 
+margin-bottom:0; 
+}
+
+
+}
+@media(max-width:676px){ 
+	.main{ 
+	background:top top;	
+	}
+	.logo{ 
+	text-align:center; 
+	}
+	.wrap{ 
+	text-align:center; 
+	}
+	
+
+}
+
